@@ -25,7 +25,7 @@ Cygwin은 [https://www.cygwin.com/](https://www.cygwin.com/)에서 다운로드 
   - Devel
     - binutils - 소스 및 바이너리 모두 설치
     - gcc-core - 소스 및 바이너리 모두 설치
-    - bision - 바이너리만 설치
+    - bison - 바이너리만 설치
     - flex - 바이너리만 설치
     - libiconv - 바이너리만 설치
     - libtool - 바이너리만 설치
