@@ -65,7 +65,7 @@ $ cd binutils-2.29-1.i686/src/binutils-gdb
 # 환경 변수 설정 및 빌드 환경 설정
 $ export TARGET=x86_64-pc-linux
 $ export PREFIX=/usr/cross
-$ ./configure --target=$TARGET --prefix=$PREFIX --enable-64-bit-bfd --disable-shared --disable-nls
+$ ./configure --target=$TARGET --prefix=$PREFIX --enable-64-bit-bfd --disable-shared --disable-nls --disable-unit-tests
 $ make configure-host
 
 # 빌드 및 설치
