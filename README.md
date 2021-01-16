@@ -50,7 +50,7 @@ Cygwin은 [https://www.cygwin.com/](https://www.cygwin.com/)에서 다운로드 
 
 ```bash
 # 버전 정보는 설치된 환경에 따라 다른 수 있음
-$ cd /usr/src/binutils-2.29-1.src
+$ cd /usr/src/binutils-2.34-1.src
 
 # 소스코드 압축 해제
 $ cygport binutils.cygport prep
@@ -60,13 +60,17 @@ $ cygport binutils.cygport prep
 
 ```bash
 # 압축 해제된 소스코드로 이동
-$ cd binutils-2.29-1.i686/src/binutils-gdb
+$ cd binutils-2.34-1.i686/src/binutils-gdb
 
 # 환경 변수 설정 및 빌드 환경 설정
 $ export TARGET=x86_64-pc-linux
 $ export PREFIX=/usr/cross
 $ ./configure --target=$TARGET --prefix=$PREFIX --enable-64-bit-bfd --disable-shared --disable-nls --disable-unit-tests
 $ make configure-host
+
+# 공유 라이브러리 이름 변경
+$ cp /lib/libmpfr.dll.a /lib/libmpfr.a
+$ cp /lib/libgmp.dll.a /lib/libgmp.a
 
 # 빌드 및 설치
 $ make LDFLAGS="-static"
@@ -87,17 +91,17 @@ $ /usr/cross/bin/x86_64-pc-linux-ld --help | grep "supported"
 
 ```bash
 # 버전 정보는 설치된 환경에 따라 다른 수 있음
-$ cd /usr/src/gcc-7.3.0-3.src
+$ cd /usr/src/gcc-10.2.0-1.src
 
 # 소스코드 압축 해제
-$ cygport gcc.cygport prep
+$ cygport gcc-10.2.0-1.cygport prep
 ```
 
 압축이 해제되면 아래와 같이 입력하여 크로스 컴파일을 진행한 후 gcc를 설치합니다.
 
 ```bash
 # 압축 해제된 소스코드로 이동
-$ cd gcc-7.3.0-3.i686/src/gcc-7.3.0
+$ cd gcc-10.2.0-1.i686/src/gcc-10.2.0
 
 # 환경 변수 설정 및 빌드 환경 설정
 $ export TARGET=x86_64-pc-linux
@@ -107,9 +111,10 @@ $ ./configure --target=$TARGET --prefix=$PREFIX --disable-nls --enable-languages
 $ make configure-host
 
 # 공유 라이브러리 이름 변경
-$ cp /lib/gcc/i686-pc-cygwin/7.3.0/libgcc_s.dll.a /lib/gcc/i686-pc-cygwin/7.3.0/libgcc_s.a
-$ cp /lib/libmpfr.dll.a /lib/libmpfr.a
+$ cp /lib/gcc/i686-pc-cygwin/10/libgcc_s.dll.a /lib/gcc/i686-pc-cygwin/10/libgcc_s.a
 $ cp /lib/libmpc.dll.a /lib/libmpc.a
+# binutils 빌드 시에 복사했다면 아래 두 파일은 생략가능...
+$ cp /lib/libmpfr.dll.a /lib/libmpfr.a
 $ cp /lib/libgmp.dll.a /lib/libgmp.a
 
 # 빌드 및 설치
