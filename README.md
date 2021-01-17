@@ -134,4 +134,4 @@ m64/m32
 # 3. QEMU 설치 및 예제 실행 방법
 책이 쓰여질 당시 QEMU 버전은 0.10.4 였으나, 지금은 3.0.0 버전까지 출시되어있습니다. 안타깝게도 책의 예제들이 0.10.4 버전에 맞추어 시험되었기 때문에 원활한 진행을 위해서는 [QEMU 0.10.4](files/qemu-0.10.4.zip)를 사용하시거나, QEMU 사이트에서 공식적으로 제공하는 가장 근접한 버전인 [QEMU 0.15.92](https://qemu.weilnetz.de/w32/2011/qemu-20111119-w32.exe)를 사용하시는 것이 좋습니다.
 
-QEMU 설치 후에는 ["64비트 멀티코어 OS 구조와 원리"](http://www.hanbit.co.kr/search/search_list.html?frm_keyword_str=64%EB%B9%84%ED%8A%B8+%EB%A9%80%ED%8B%B0%EC%BD%94%EC%96%B4+OS+%EC%9B%90%EB%A6%AC%EC%99%80+%EA%B5%AC%EC%A1%B0)의 각 장에서 설명한 과정에 맞추어 예제를 실행하면 됩니다.
+QEMU 설치 후에는 ["64비트 멀티코어 OS 구조와 원리 1권"](http://www.yes24.com/Product/Goods/65061299?OzSrank=1)과 ["64비트 멀티코어 OS 구조와 원리 2권"](http://www.yes24.com/Product/Goods/65061297?OzSrank=2)의 각 장에서 설명한 과정에 맞추어 예제를 실행하면 됩니다.
